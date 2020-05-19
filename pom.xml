@@ -7,8 +7,7 @@
     <groupId>org.qpm</groupId>
     <artifactId>QuarkusPM</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <properties>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <properties><project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <surefire-plugin.version>2.22.0</surefire-plugin.version>
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <quarkus.version>1.0.0.CR1</quarkus.version>
@@ -88,6 +87,9 @@
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-maven-plugin</artifactId>
                 <version>${quarkus.version}</version>
+                <configuration>
+                    <uberJar>true</uberJar>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -124,6 +126,9 @@
                     <plugin>
                         <artifactId>maven-failsafe-plugin</artifactId>
                         <version>${surefire-plugin.version}</version>
+                        <configuration>
+                            <uberJar>true</uberJar>
+                        </configuration>
                         <executions>
                             <execution>
                                 <goals>
