@@ -109,6 +109,9 @@
                     <systemProperties>
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                     </systemProperties>
+                    <includes>
+                        <include>com.qpm.marketdata.resources.TestTestResources.java</include>
+                    </includes>
                 </configuration>
             </plugin>
         </plugins>
